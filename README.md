@@ -1,6 +1,4 @@
 
-
-```
 # GhostLock-Nevada – Motorola Moto G Play 2026 Port
 
 **GhostLock (CVE-2026-43499)** exploit port for the **Motorola Moto G Play 2026 (XT2615-1)** – TracFone/Verizon variant.
@@ -231,27 +229,8 @@ This project is for educational and research purposes only. Use at your own risk
 ---
 
 **GitHub:** https://github.com/crabcakes97/GhostLock-Nevada  
+
 **XDA Thread:** https://xdaforums.com/t/dev-root-moto-g-play-2026-nevada-test.4797484/
 ```
 
 ---
-
-## 🚀 Push to GitHub
-
-```bash
-cd ~/Root-My-Galaxy-Payloads
-git add README.md
-git commit -m "Update README with Motorola port, 90% status, new target folder, and all offsets"
-git push
-```
-
----
-
-Your README now includes:
-- The new `moto-g-play-2026` folder in the structure
-- All the Motorola offsets
-- 90% completion status with CFI blocker
-- Build instructions specific to your target
-- Credits to Root-My-Galaxy and UnPlus
-- The debugging history
-- References to other profiles in the repo
