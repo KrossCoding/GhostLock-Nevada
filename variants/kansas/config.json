@@ -1,0 +1,30 @@
+{
+  "name": "Kansas",
+  "device": "moto_g_2025",
+  "pattern": "9-12-9-8-2",
+  "author": "generated",
+  "version": "1.0",
+  "description": "GhostLock Kansas variant tuned for Moto G 2025 with pattern 9-12-9-8-2",
+  "layout": {
+    "columns": 9,
+    "rows": 12,
+    "grid": [9,12,9,8,2],
+    "safe_area": {
+      "top": 48,
+      "bottom": 48,
+      "left": 16,
+      "right": 16
+    }
+  },
+  "ui": {
+    "clock_position": {"row": 1, "col": 1, "colSpan": 9},
+    "status_position": {"row": 0, "col": 1, "colSpan": 9},
+    "unlock_area": {"row": 9, "col": 1, "colSpan": 9},
+    "notification_stack": {"row": 2, "col": 1, "colSpan": 9}
+  },
+  "assets": {
+    "background": "assets/kansas_bg.jpg",
+    "logo": "assets/kansas_logo.png",
+    "unlock_icon": "assets/unlock_icon.png"
+  }
+}
