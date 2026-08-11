@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Lockscreen variant="Kansas" device="moto_g_2025">
+  <!-- Safe area margins applied from config.json -->
+  <StatusBar row="0" col="1" colSpan="9" height="24dp"/>
+  <Clock row="1" col="1" colSpan="9" height="72dp" gravity="center" font="Roboto-Medium" size="36sp" color="#FFFFFFFF"/>
+  <Notifications row="2" col="1" colSpan="9" maxItems="3" spacing="8dp" color="#CCFFFFFF"/>
+  <QuickActions row="6" col="1" colSpan="9 spacing="12dp">
+    <Action id="camera" icon="assets/camera.png" gravity="left"/>
+    <Action id="flashlight" icon="assets/flashlight.png" gravity="right"/>
+  </QuickActions>
+  <UnlockArea row="9" col="1" colSpan="9 height="120dp" gravity="center">
+    <PatternGrid rows="2" cols="5" pattern="9-12-9-8-2" dotSize="14dp" spacing="18dp" inactiveColor="#66FFFFFF" activeColor="#FFFFFFFF"/>
+    <UnlockHint text="Swipe or enter pattern" color="#99FFFFFF" size="14sp" marginTop="8dp"/>
+  </UnlockArea>
+  <Footer row="11" col="1" colSpan="9 height="36dp" gravity="center">
+    <Logo src="assets/kansas_logo.png" width="120dp" height="24dp"/>
+  </Footer>
+</Lockscreen>
